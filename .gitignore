@@ -1,6 +1,6 @@
 secrets.yaml
-/.config
-/.secrets
+.config/
+.secrets/
 
 
 ### Terraform ###
