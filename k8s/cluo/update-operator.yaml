@@ -26,7 +26,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         - name: UPDATE_OPERATOR_REBOOT_WINDOW_START
-          value: "Thu 00:00"
+          value: "Sat 00:00"
         - name: UPDATE_OPERATOR_REBOOT_WINDOW_LENGTH
           value: "2h"
       tolerations:
