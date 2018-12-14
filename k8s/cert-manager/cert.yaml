@@ -1,0 +1,108 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: dev-network-data-cabling-co-uk-staging
+  namespace: wp-ndc
+spec:
+  secretName: dev-network-data-cabling-co-uk-tls-staging
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: 'dev.network-data-cabling.co.uk'
+  dnsNames:
+  - dev.network-data-cabling.co.uk
+  acme:
+    config:
+    - dns01:
+        provider: cf-dns
+      domains:
+      - '*.dev.network-data-cabling.co.uk'
+      - dev.network-data-cabling.co.uk
+---
+
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: network-data-cabling-co-uk
+  namespace: wp-old-ndc
+spec:
+  secretName: network-data-cabling-co-uk-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: network-data-cabling.co.uk
+  dnsNames:
+  - network-data-cabling.co.uk
+  acme:
+    config:
+    - dns01:
+        provider: cf-dns
+      domains:
+      - '*.network-data-cabling.co.uk'
+      - network-data-cabling.co.uk
+---
+
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: fso-laser-link-co-uk
+  namespace: wp-fsoll
+spec:
+  secretName: fso-laser-link-co-uk-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: fso-laser-link.co.uk
+  dnsNames:
+  - fso-laser-link.co.uk
+  acme:
+    config:
+    - dns01:
+        provider: cf-dns
+      domains:
+      - '*.fso-laser-link.co.uk'
+      - fso-laser-link.co.uk
+---
+
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: fibre-optic-cabling.co.uk
+  namespace: wp-foc
+spec:
+  secretName: fibre-optic-cabling-co-uk-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: fibre-optic-cabling.co.uk
+  dnsNames:
+  - fibre-optic-cabling.co.uk
+  acme:
+    config:
+    - dns01:
+        provider: cf-dns
+      domains:
+      - '*.fibre-optic-cabling.co.uk'
+      - fibre-optic-cabling.co.uk
+---
+
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: mail.network-data-cabling.co.uk
+  namespace: mailserver
+spec:
+  secretName: mail-network-data-cabling-co-uk-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: mail.network-data-cabling.co.uk
+  dnsNames:
+  - mail.network-data-cabling.co.uk
+  acme:
+    config:
+    - dns01:
+        provider: cf-dns
+      domains:
+      - '*.mail.network-data-cabling.co.uk'
+      - mail.network-data-cabling.co.uk
