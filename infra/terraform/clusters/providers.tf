@@ -5,7 +5,7 @@ provider "digitalocean" {
 }
 
 provider "ct" {
-  version = "0.2.1"
+  version = "0.3.0"
 }
 
 provider "local" {
