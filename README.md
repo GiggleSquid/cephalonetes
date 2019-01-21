@@ -4,7 +4,7 @@ Cephalonetes is collection of existing tools, utilities, and software used to cr
 
 ## Components
 
-* [Typhoon 1.12.3](https://github.com/poseidon/typhoon/tree/v1.12.3) and adons
+* [Typhoon 1.13.2](https://github.com/poseidon/typhoon/tree/v1.13.2) and adons
   * CLUO
   * Prometheus
   * Grafana
