@@ -20,12 +20,12 @@ spec:
       serviceAccountName: prometheus
       containers:
         - name: prometheus
-          image: quay.io/prometheus/prometheus:v2.5.0
+          image: quay.io/prometheus/prometheus:v2.6.0
           args:
             - --web.listen-address=0.0.0.0:9090
             - --config.file=/etc/prometheus/prometheus.yaml
             - --storage.tsdb.path=/var/lib/prometheus
-            - --storage.tsdb.retention=122d
+            - --storage.tsdb.retention=90d
           resources:
             requests:
               cpu: "100m"
