@@ -1,5 +1,6 @@
 module "digital-ocean-nemo" {
-  source = "git::https://github.com/poseidon/typhoon//digital-ocean/container-linux/kubernetes?ref=v1.13.2"
+  #source = "git::https://github.com/poseidon/typhoon//digital-ocean/container-linux/kubernetes?ref=v1.13.2"
+  source = "./digital-ocean/container-linux/kubernetes"
 
   providers = {
     digitalocean = "digitalocean.default"
